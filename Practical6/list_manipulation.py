@@ -9,6 +9,8 @@ for i in range (1,10):
   exon_lengths += exon_lengths1
   i=i+1
 
+print (exon_lengths)
+  
 #add a plot
 import numpy as np
 import matplotlib.pyplot as plt
