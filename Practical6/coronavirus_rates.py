@@ -1,5 +1,6 @@
 #input data to the dictionary
 coronavirus_infection={'USA':29862124,'India':11285561,'Brazil':11205972,'Russia':4360823,'UK':4234924}
+print (coronavirus_infection)
 #add a plot
 import matplotlib.pyplot as plt
 labels='USA','India','Brazil','Russia','UK' #determine the labels
