@@ -1,0 +1,8 @@
+Question:How have cases and total cases developed over time in Spain?
+
+line number:line 39-46
+
+Result:the plot shows that Spain new cases and total cases were close to zero
+and steady in a long time at first. Then, the total cases increased very fast and reached 
+more than 80000. The new cases increased for a while and reached the peak.
+Then the new cases decreased.  
