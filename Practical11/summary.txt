@@ -1,0 +1,18 @@
+the alignment score:
+human-mouse:1091
+human-random:-250
+mouse-random:-250
+the percentage of identical amino acids for each comparison.
+human-mouse:89.69%
+human-random:5.83%
+mouse-random:6.28%
+Interpretation:
+The alignment score and identical percentage between human and mouse are very
+high and it shows there is a high degree of genetic similarity. That is 
+because they are all mammals and their evolutional origin is the same.
+However, the alignment score and identical percentage between random sequence
+and human or mouse are low. The negative scores show their relationship is 
+biological far away. It shows their degree of genetic similarity is low.
+They have different evolutional origins. The random sequence may be taken from
+nonmammalian organism. 
+
