@@ -1,6 +1,6 @@
 seq = 'ATGCGACTACGATCGAGGGCC'
 import re
-code=re.split(r'([ATCG]{3})',seq)
+code=re.split(r'([ATCG]{3})',seq)#divide sequence into groups with three bases
 for i in code:
  if i == "":
   code.remove(i)
