@@ -6,12 +6,14 @@ function=open('Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa','r')
 lines=function.readlines()
 unknown_function=[]
 
+#get the name
 for i in range(len(lines)):
   if re.findall('unknown function',lines[i]):
     name=re.search(r'(>.+?)_',lines[i])
     name=name.group()
     unknown_function.append(name)
 
+#get the sequence    
     sequence=''
     preseq=''
     sequence+='\n'
@@ -23,7 +25,7 @@ for i in range(len(lines)):
     sequence+=preseq.replace('\n','')
     unknown_function.append(sequence)
 
-
+#get the length
     length=''
     unknown_function.append(length)
 dictionary={}
