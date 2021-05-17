@@ -1,6 +1,6 @@
 def reverse_caculator(DNA):
- DNA=DNA.upper()
- DNA_complement=''
+ DNA=DNA.upper() #make it possible to read any input sequence with case insensitive
+ DNA_complement='' #get the complementary sequence
  for i in range(0,len(DNA)):
   if DNA[i]=='A':
    DNA_complement+='T'
@@ -10,7 +10,7 @@ def reverse_caculator(DNA):
    DNA_complement+='C'
   elif DNA[i]=='C':
    DNA_complement+='G'
- result=DNA_complement[::-1]
+ result=DNA_complement[::-1] #reverse the complementary sequence 
  return  print (result)
 
 #example
