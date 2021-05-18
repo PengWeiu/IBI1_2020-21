@@ -1,7 +1,7 @@
 import os
 import re
 os.chdir("/Users/彭伟昱/PycharmProjects/pythonProject1")
-unknown=open('unknown_function.fa','r')
+unknown=open('unknown_function.fa','r') #open and read the file
 lines=unknown.readlines()
 
 codetable={'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
@@ -24,9 +24,9 @@ codetable={'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
 unknown_protein=[]
 for i in range(0,len(lines)):
   if lines[i].startswith('>'):
-    unknown_protein.append(lines[i])
+    unknown_protein.append(lines[i]) #find and add the name of unknown function DNA in the list
   elif lines[i].startswith('Length'):
-    continue
+    continue #skip the length line
   else:
     protein=''
     line=lines[i].strip()
@@ -37,18 +37,18 @@ for i in range(0,len(lines)):
      else:
       break
     protein+='\n'
-    unknown_protein.append(protein)
+    unknown_protein.append(protein)#find and add the sequence of unknown function protein in the list
 
 for i in range(len(unknown_protein)):
      m=unknown_protein[i]
-     if m.startswith('>'):
+     if m.startswith('>'): #find, calculate and add the length of protein in the list
         unknown_protein[i] = re.findall(r'>.+?',unknown_protein[i])[0]
         length=str(len(unknown_protein[i+1])-1)
         unknown_protein[i]+='\n Length:'
         unknown_protein[i]+=length
         unknown_protein[i]+='.\n'
 
-unknown_DNA_to_protein=open('DNA_protein.fa','w')
+unknown_DNA_to_protein=open('DNA_protein.fa','w') #add the context of list in the file 
 for line in unknown_protein:
  unknown_DNA_to_protein.write(line)
 unknown_DNA_to_protein.close()
