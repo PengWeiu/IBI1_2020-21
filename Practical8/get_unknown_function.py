@@ -35,8 +35,8 @@ for i in range(len(unknown_function)):
         unknown_function[i]+=length
         unknown_function[i+2]+='.\n'
 
-unknown=open('unknown_function.fa','w')
-for i in unknown_function:  #add the context of the list'unknown_function' into the file
+unknown=open('unknown_function.fa','w') #add the context of the list'unknown_function' into the file
+for i in unknown_function: 
  n=str(i)
  m=str(n)
  unknown.write(m)
