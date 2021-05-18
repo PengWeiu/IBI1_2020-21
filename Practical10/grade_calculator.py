@@ -1,10 +1,12 @@
 class Student():
- def __init__(self,name,code,poster,final): #initialize the class
+#initialize the class
+ def __init__(self,name,code,poster,final):
   self.name=name
   self.code=code
   self.poster=poster
   self.final=final
- def grade(self):  #define a function to calculate and output the grade
+#define a function to calculate and output the grade
+ def grade(self):  
   grades=self.poster*0.3+self.final*0.3+self.code*0.4
   print (self.name,' ','Grade:',grades)
 
