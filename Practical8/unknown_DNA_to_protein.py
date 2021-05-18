@@ -40,8 +40,8 @@ for i in range(0,len(lines)):
     unknown_protein.append(protein)#find and add the sequence of unknown function protein in the list
 
 for i in range(len(unknown_protein)):
-     m=unknown_protein[i]
-     if m.startswith('>'): #find, calculate and add the length of protein in the list
+     m=unknown_protein[i] #find, calculate and add the length of protein in the list
+     if m.startswith('>'):
         unknown_protein[i] = re.findall(r'>.+?',unknown_protein[i])[0]
         length=str(len(unknown_protein[i+1])-1)
         unknown_protein[i]+='\n Length:'
