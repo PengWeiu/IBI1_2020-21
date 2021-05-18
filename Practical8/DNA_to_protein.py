@@ -1,6 +1,7 @@
 seq = 'ATGCGACTACGATCGAGGGCC'
 import re
-code=re.split(r'([ATCG]{3})',seq)#divide sequence into groups with three bases
+#divide sequence into groups with three bases
+code=re.split(r'([ATCG]{3})',seq)
 for i in code:
  if i == "":
   code.remove(i)
@@ -22,6 +23,7 @@ codetable={'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
  'AGT':'S','AGC':'S','AGA':'A','AGG':'R',
  'GGT':'G','GGC':'G','GGA':'G','GGG':'G'}
 amino_acid = ''
+#translate the sequence into protein
 for i in code:
  amino_acid +=codetable[i] 
 print (amino_acid) 
