@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 os.chdir("/Users/彭伟昱/PycharmProjects/pythonProject1/Practical7") #open the file
-covid_data = pd.read_csv("full_data.csv")
+covid_data = pd.read_csv("full_data.csv")#read the file
 
 print(covid_data.iloc[0:11:2,:])
 print (covid_data.loc[(covid_data.loc[:,"location"] == "Afghanistan"),"total_cases"])
@@ -11,7 +11,7 @@ print (covid_data.loc[(covid_data.loc[:,"location"] == "Afghanistan"),"total_cas
 #print(covid_data.loc[(covid_data.loc[:,"location"] == "World"), "new_cases"].mean())
 #print(covid_data.loc[(covid_data.loc[:,"location"] == "World"), "new_cases"].median())
 
-a=np.array(covid_data.loc[(covid_data.loc[:,"location"] == "World"),"new_cases"])
+a=np.array(covid_data.loc[(covid_data.loc[:,"location"] == "World"),"new_cases"]) #make a array of data
 b=np.mean(a) #get the mean
 c=np.median(a) #get the median
 print (b)
