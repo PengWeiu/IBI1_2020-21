@@ -23,6 +23,8 @@ def get_terms(terms,macromolecule):
   for term in terms:
     defstr=term.getElementsByTagName('defstr')[0].childNodes[0].data
     id=term.getElementsByTagName('id')[0].childNodes[0].data
+    if not macromolecule.isupper():
+       defstr=defstr.lower()   #aviod case sensitivity
     if macromolecule in defstr:
        gene.append(id)
   return set(gene) #aviod repeating
